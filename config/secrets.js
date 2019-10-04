@@ -21,6 +21,9 @@ const {
 
   LINKEDIN_ID,
   LINKEDIN_SECRET,
+  
+  QUORA_ID
+  QUORA_SECRET,
 
   TWITTER_KEY,
   TWITTER_SECRET,
@@ -82,7 +85,14 @@ module.exports = {
     scope: ['r_basicprofile', 'r_emailaddress'],
     passReqToCallback: true
   },
-
+  QUORA:
+  {
+    clientID:QUORA_ID,
+    clientSecret:QUORA_SECRET,
+    callbackURL" '/auth/quora/callback',
+    profilefields: ['public-profile-url'],
+    passReqToCallback:true
+  };
   stripe: {
     public: STRIPE_PUBLIC,
     secret: STRIPE_SECRET
